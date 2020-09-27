@@ -14,7 +14,7 @@ class QuizThursday extends StatelessWidget {
       title: 'Quiz Thursday',
       debugShowCheckedModeBanner: true,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
       ),
       home: MappingPage(
         auth: Auth(),

@@ -80,7 +80,7 @@ class _LoginRegisterState extends State<LoginRegisterPage> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text("SRDS"),
+        title: Image.asset('assets/images/srds-logo.png'),
       ),
       body: Container(
         margin: EdgeInsets.all(15.0),
