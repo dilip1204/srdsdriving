@@ -1,9 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:quiz_thursday/Authentication.dart';
-import 'package:quiz_thursday/DialogBox.dart';
-import 'DialogBox.dart';
+import 'package:srds/auth/Authentication.dart';
+import 'package:srds/common/DialogBox.dart';
+import '../common/DialogBox.dart';
 
 class LoginRegisterPage extends StatefulWidget {
   LoginRegisterPage({

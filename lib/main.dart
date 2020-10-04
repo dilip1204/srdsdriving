@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_thursday/Mapping.dart';
-import 'Authentication.dart';
+import 'package:srds/common/Mapping.dart';
+import 'auth/Authentication.dart';
 
 void main() {
-  runApp(QuizThursday());
+  runApp(SrdsMain());
 }
 
-class QuizThursday extends StatelessWidget {
+class SrdsMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-      title: 'Quiz Thursday',
+      title: 'srds',
       debugShowCheckedModeBanner: true,
       theme: ThemeData(
         primarySwatch: Colors.grey,

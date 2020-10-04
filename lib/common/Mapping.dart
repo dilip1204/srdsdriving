@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_thursday/LoginRegisterPage.dart';
-import 'package:quiz_thursday/HomePage.dart';
-import 'package:quiz_thursday/Authentication.dart';
+import 'package:srds/login/LoginRegisterPage.dart';
+import 'package:srds/home/HomePage.dart';
+import 'package:srds/auth/Authentication.dart';
 
 class MappingPage extends StatefulWidget {
   final AuthImplementation auth;
