@@ -25,11 +25,13 @@ dependencies:
   cupertino_icons: ^0.1.2
   firebase_core: ^0.4.0+9
   firebase_auth: ^0.14.0+5
+  flutter_plugin_pdf_viewer: ^1.0.7
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+    
 
 
 # For information on the generic Dart part of this file, see the
@@ -51,6 +53,13 @@ flutter:
   assets:
     - assets/images/welcome.png
     - assets/images/srds-logo.png
+    - assets/images/information.png
+    - assets/images/mandatory.png
+    - assets/images/priority.png
+    - assets/images/prohibitory.png
+    - assets/images/warning.png
+    - assets/pdf/warning_signs.pdf
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

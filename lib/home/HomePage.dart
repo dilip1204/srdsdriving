@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:srds/screens/Signs.dart';
 import '../auth/Authentication.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,9 +19,6 @@ class HomePage extends StatefulWidget {
 enum FormType { home, signs }
 
 class _HomePageState extends State<HomePage> {
-  final formKey = GlobalKey<FormState>();
-  FormType _formType = FormType.home;
-
   void _logOutUser() async {
     try {
       await widget.auth.signOut();
@@ -31,10 +29,10 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _moveToSignsPage() {
-    //formKey.currentState.reset();
-    setState(() {
-      _formType = FormType.signs;
-    });
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Signs()),
+    );
   }
 
   @override
@@ -115,7 +113,7 @@ class _HomePageState extends State<HomePage> {
       ),
       // body: Container(),
       bottomNavigationBar: BottomAppBar(
-        color: Colors.blue,
+        color: Colors.grey,
         child: Container(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
