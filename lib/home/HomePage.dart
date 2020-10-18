@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:srds/screens/Signs.dart';
+import 'package:srds/signs/Signs.dart';
 import '../auth/Authentication.dart';
 
 class HomePage extends StatefulWidget {

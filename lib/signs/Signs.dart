@@ -16,8 +16,6 @@ class Signs extends StatefulWidget {
   }
 }
 
-enum FormType { signs }
-
 class _SignsState extends State<Signs> {
   bool _isLoading = true;
   PDFDocument doc;
@@ -45,7 +43,7 @@ class _SignsState extends State<Signs> {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
+            children: <Widget>[
               Flexible(
                 flex: 8,
                 child: _isLoading
@@ -78,6 +76,7 @@ class _SignsState extends State<Signs> {
                   ),
                   textColor: Color(0xFF292929),
                   color: Colors.white10),
+
               RaisedButton(
                   shape: RoundedRectangleBorder(),
                   padding: EdgeInsets.only(
@@ -174,6 +173,7 @@ class _SignsState extends State<Signs> {
                   ),
                   textColor: Color(0xFF292929),
                   color: Colors.white10),
+              // ),
             ],
           ),
         ),
