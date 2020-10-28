@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import '../auth/Authentication.dart';
+import '../signs/SignsReport.dart';
 import 'package:flutter_plugin_pdf_viewer/flutter_plugin_pdf_viewer.dart';
 
 class Signs extends StatefulWidget {
@@ -19,15 +20,11 @@ class Signs extends StatefulWidget {
 class _SignsState extends State<Signs> {
   bool _isLoading = true;
   PDFDocument doc;
+  String name;
 
-  void _loadFromAssets() async {
-    setState(() {
-      _isLoading = true;
-    });
-    doc = await PDFDocument.fromAsset('assets/pdf/warning_signs.pdf');
-    setState(() {
-      _isLoading = false;
-    });
+  void _navigateToRoute(String name) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => SignsReport(name)));
   }
 
   //Design
@@ -44,19 +41,12 @@ class _SignsState extends State<Signs> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Flexible(
-                flex: 8,
-                child: _isLoading
-                    ? CircularProgressIndicator()
-                    : PDFViewer(
-                        document: doc,
-                      ),
-              ),
               RaisedButton(
                   shape: RoundedRectangleBorder(),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
-                  onPressed: _loadFromAssets,
+                  onPressed: () =>
+                      _navigateToRoute('assets/pdf/warning_signs.pdf'),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
@@ -81,7 +71,8 @@ class _SignsState extends State<Signs> {
                   shape: RoundedRectangleBorder(),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
-                  onPressed: _loadFromAssets,
+                  onPressed: () =>
+                      _navigateToRoute('assets/pdf/priority_signs.pdf'),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
@@ -105,7 +96,8 @@ class _SignsState extends State<Signs> {
                   shape: RoundedRectangleBorder(),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
-                  onPressed: _loadFromAssets,
+                  onPressed: () =>
+                      _navigateToRoute('assets/pdf/prohibitory_signs.pdf'),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
@@ -129,7 +121,8 @@ class _SignsState extends State<Signs> {
                   shape: RoundedRectangleBorder(),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
-                  onPressed: _loadFromAssets,
+                  onPressed: () =>
+                      _navigateToRoute('assets/pdf/mandatory_signs.pdf'),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
@@ -153,7 +146,8 @@ class _SignsState extends State<Signs> {
                   shape: RoundedRectangleBorder(),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
-                  onPressed: _loadFromAssets,
+                  onPressed: () =>
+                      _navigateToRoute('assets/pdf/information_signs.pdf'),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
