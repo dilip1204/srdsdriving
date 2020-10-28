@@ -59,6 +59,10 @@ flutter:
     - assets/images/prohibitory.png
     - assets/images/warning.png
     - assets/pdf/warning_signs.pdf
+    - assets/pdf/priority_signs.pdf
+    - assets/pdf/prohibitory_signs.pdf
+    - assets/pdf/mandatory_signs.pdf
+    - assets/pdf/information_signs.pdf
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
