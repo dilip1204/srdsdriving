@@ -25,7 +25,6 @@ class MockTest extends StatefulWidget {
 //}
 
 class _MockTestState extends State<MockTest> {
-  bool _isLoading = true;
 
   String get routeName => null;
 

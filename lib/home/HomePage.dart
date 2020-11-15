@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:srds/mocktest/MockTest.dart';
+import 'package:srds/screens/AboutUs.dart';
+import 'package:srds/screens/ContactUs.dart';
 import 'package:srds/signs/Signs.dart';
 import '../auth/Authentication.dart';
 
@@ -20,6 +22,11 @@ class HomePage extends StatefulWidget {
 enum FormType { home, signs }
 
 class _HomePageState extends State<HomePage> {
+
+  static const String _AccountName = 'Dilipkumar';
+  static const String _AccountEmail = 'dilip.kumar1204@gmail.com';
+  static const String _AccountAbbr = 'DK';
+
   void _logOutUser() async {
     try {
       await widget.auth.signOut();
@@ -55,18 +62,23 @@ class _HomePageState extends State<HomePage> {
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
-              child: Text('SRDS Drving school'),
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-            ),
+        new UserAccountsDrawerHeader(
+        accountName: const Text(_AccountName),
+        accountEmail: const Text(_AccountEmail),
+        currentAccountPicture: new CircleAvatar(
+            backgroundColor: Colors.brown,
+            child: new Text(_AccountAbbr)
+        ),
+        ),
             ListTile(
               title: Text('About us'),
               onTap: () {
                 // Update the state of the app.
                 // ...
                 Navigator.pop(context);
+
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => AboutUs()));
               },
             ),
             ListTile(
@@ -82,6 +94,10 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 // Update the state of the app.
                 // ...
+               /* Navigator.pop(context);
+
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => ContactUs()));*/
               },
             ),
           ],
