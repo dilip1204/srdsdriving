@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:srds/mocktest/MockTest.dart';
 import 'package:srds/signs/Signs.dart';
 import '../auth/Authentication.dart';
 
@@ -32,6 +33,13 @@ class _HomePageState extends State<HomePage> {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => Signs()),
+    );
+  }
+
+  void _moveToMockTestPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => MockTest()),
     );
   }
 
@@ -94,7 +102,7 @@ class _HomePageState extends State<HomePage> {
             ),
             RaisedButton(
               child: Text("Mock Test"),
-              onPressed: _moveToSignsPage,
+              onPressed: _moveToMockTestPage,
               color: Colors.green,
               textColor: Colors.yellow,
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
