@@ -1,11 +1,9 @@
-
-
 import 'package:flutter/material.dart';
-
 import 'package:flutter_plugin_pdf_viewer/flutter_plugin_pdf_viewer.dart';
 
 class SignsReport extends StatefulWidget {
   String name;
+
   SignsReport(this.name);
 
   @override
@@ -16,6 +14,7 @@ class _SignsReportState extends State<SignsReport> {
   bool _isLoading = true;
   PDFDocument doc;
   String name;
+
   _SignsReportState(this.name);
 
   @override

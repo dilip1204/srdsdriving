@@ -41,40 +41,40 @@ class AboutUs extends StatelessWidget {
     final servicesSection = new Container(
         padding: const EdgeInsets.only(bottom: 10.0),
         child: Card(
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          new Container(
-            child: new Text("Services",
-                style:
-                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0)),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              new Container(
+                child: new Text("Services",
+                    style: new TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 18.0)),
+              ),
+              const ListTile(
+                leading: Icon(Icons.ac_unit_rounded),
+                title: Text('LLR'),
+                subtitle: Text('Can apply LLRs for all two wheeler and LMV.'),
+              ),
+              const ListTile(
+                leading: Icon(Icons.ac_unit_rounded),
+                title: Text('Two wheeler/LMV/ Heavy Vehicle License'),
+                subtitle: Text(
+                    'Training provided by professionals along with theory classes.'),
+              ),
+              const ListTile(
+                leading: Icon(Icons.ac_unit_rounded),
+                title: Text('RC Name Change/Renewal'),
+                subtitle: Text('All kind of RC works undertaken.'),
+              ),
+              const ListTile(
+                leading: Icon(Icons.ac_unit_rounded),
+                title: Text('Insurance'),
+                subtitle: Text(
+                    'Insurance for All type of vehicles with in 2 minutes.'),
+              ),
+            ],
           ),
-          const ListTile(
-            leading: Icon(Icons.ac_unit_rounded),
-            title: Text('LLR'),
-            subtitle: Text('Can apply LLRs for all two wheeler and LMV.'),
-          ),
-          const ListTile(
-            leading: Icon(Icons.ac_unit_rounded),
-            title: Text('Two wheeler/LMV/ Heavy Vehicle License'),
-            subtitle: Text(
-                'Training provided by professionals along with theory classes.'),
-          ),
-          const ListTile(
-            leading: Icon(Icons.ac_unit_rounded),
-            title: Text('RC Name Change/Renewal'),
-            subtitle: Text('All kind of RC works undertaken.'),
-          ),
-          const ListTile(
-            leading: Icon(Icons.ac_unit_rounded),
-            title: Text('Insurance'),
-            subtitle:
-                Text('Insurance for All type of vehicles with in 2 minutes.'),
-          ),
-        ],
-      ),
-    ));
+        ));
 
     //build function returns a "Widget"
     return new Scaffold(

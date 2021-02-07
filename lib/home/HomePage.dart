@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:srds/mocktest/MockTest.dart';
 import 'package:srds/screens/AboutUs.dart';
 import 'package:srds/screens/ContactUs.dart';
+import 'package:srds/screens/PhotoGallery.dart';
 import 'package:srds/signs/Signs.dart';
 import '../auth/Authentication.dart';
 
@@ -10,6 +11,7 @@ class HomePage extends StatefulWidget {
     this.auth,
     this.onSignedOut,
   });
+
   final AuthImplementation auth;
   final VoidCallback onSignedOut;
 
@@ -22,7 +24,6 @@ class HomePage extends StatefulWidget {
 enum FormType { home, signs }
 
 class _HomePageState extends State<HomePage> {
-
   static const String _AccountName = 'Dilipkumar';
   static const String _AccountEmail = 'dilip.kumar1204@gmail.com';
   static const String _AccountAbbr = 'DK';
@@ -62,14 +63,12 @@ class _HomePageState extends State<HomePage> {
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: <Widget>[
-        new UserAccountsDrawerHeader(
-        accountName: const Text(_AccountName),
-        accountEmail: const Text(_AccountEmail),
-        currentAccountPicture: new CircleAvatar(
-            backgroundColor: Colors.brown,
-            child: new Text(_AccountAbbr)
-        ),
-        ),
+            new UserAccountsDrawerHeader(
+              accountName: const Text(_AccountName),
+              accountEmail: const Text(_AccountEmail),
+              currentAccountPicture: new CircleAvatar(
+                  backgroundColor: Colors.brown, child: new Text(_AccountAbbr)),
+            ),
             ListTile(
               title: Text('About us'),
               onTap: () {
@@ -87,6 +86,8 @@ class _HomePageState extends State<HomePage> {
                 // Update the state of the app.
                 // ...r
                 Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => PhotoGallery()));
               },
             ),
             ListTile(
@@ -94,10 +95,10 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 // Update the state of the app.
                 // ...
-               /* Navigator.pop(context);
+                Navigator.pop(context);
 
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => ContactUs()));*/
+                    builder: (BuildContext context) => ContactUs()));
               },
             ),
           ],

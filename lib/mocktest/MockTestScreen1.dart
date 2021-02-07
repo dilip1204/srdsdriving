@@ -5,14 +5,15 @@ import 'package:flutter/scheduler.dart';
 import 'package:srds/auth/Authentication.dart';
 import 'package:srds/mocktest/MockTest.dart';
 
-
 class MockTestScreen1 extends StatefulWidget {
   MockTestScreen1({
     this.auth,
     this.onSignedIn,
   });
+
   final AuthImplementation auth;
   final VoidCallback onSignedIn;
+
   @override
   State<StatefulWidget> createState() {
     return _MockTestScreen1State();

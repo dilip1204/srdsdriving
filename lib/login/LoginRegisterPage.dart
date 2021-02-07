@@ -10,8 +10,10 @@ class LoginRegisterPage extends StatefulWidget {
     this.auth,
     this.onSignedIn,
   });
+
   final AuthImplementation auth;
   final VoidCallback onSignedIn;
+
   State<StatefulWidget> createState() {
     return _LoginRegisterState();
   }

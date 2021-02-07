@@ -9,6 +9,7 @@ class MappingPage extends StatefulWidget {
   MappingPage({
     this.auth,
   });
+
   State<StatefulWidget> createState() {
     return _MappingPageState();
   }

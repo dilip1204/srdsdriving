@@ -1,16 +1,18 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:srds/auth/Authentication.dart';
 import 'package:srds/mocktest/MockTestScreen1.dart';
-
 
 class MockTest extends StatefulWidget {
   MockTest({
     this.auth,
     this.onSignedIn,
   });
+
   final AuthImplementation auth;
   final VoidCallback onSignedIn;
+
   @override
   State<StatefulWidget> createState() {
     return _MockTestState();
@@ -25,7 +27,6 @@ class MockTest extends StatefulWidget {
 //}
 
 class _MockTestState extends State<MockTest> {
-
   String get routeName => null;
 
   void _moveToPreviousPage() {
