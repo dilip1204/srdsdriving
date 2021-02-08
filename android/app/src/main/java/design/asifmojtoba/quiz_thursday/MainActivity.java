@@ -12,7 +12,7 @@ import io.flutter.plugins.GeneratedPluginRegistrant;
  *
  */
 public class MainActivity extends FlutterActivity {
-    private static  final  String CHANNEL = "flutter.native/helper";
+    private static final String CHANNEL = "flutter.native/helper";
 
     @Override
     public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {

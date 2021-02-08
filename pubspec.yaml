@@ -11,7 +11,7 @@ description: A new Flutter application.
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 1.0.2
 
 environment:
   sdk: ">=2.2.2 <3.0.0"
@@ -64,6 +64,9 @@ flutter:
     - assets/pdf/prohibitory_signs.pdf
     - assets/pdf/mandatory_signs.pdf
     - assets/pdf/information_signs.pdf
+    - assets/images/gtr.png
+    - assets/images/gtrwhite.png
+    - assets/images/bathurst.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
