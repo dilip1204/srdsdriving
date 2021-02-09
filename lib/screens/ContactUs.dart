@@ -1,36 +1,93 @@
-import 'package:contactus/contactus.dart';
 import 'package:flutter/material.dart';
 
 class ContactUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      theme: ThemeData.fallback().copyWith(
+        scaffoldBackgroundColor: Colors.white,
+        primaryColor: Colors.grey,
+      ),
       home: Scaffold(
-        bottomNavigationBar: ContactUsBottomAppBar(
-          companyName: 'Sri Ragavendra Driving School',
-          textColor: Colors.white,
-          backgroundColor: Colors.teal.shade300,
-          email: 'srds2020@gmail.com',
-        ),
-        backgroundColor: Colors.teal,
-        body: ContactUs(
-            /* cardColor: Colors.white,
-          textColor: Colors.teal.shade900,
-          logo: AssetImage('images/crop.jpg'),
-          email: 'adoshi26.ad@gmail.com',
-          companyName: 'Abhishek Doshi',
-          companyColor: Colors.teal.shade100,
-          phoneNumber: '+917818044311',
-          website: 'https://abhishekdoshi.godaddysites.com',
-          githubUserName: 'AbhishekDoshi26',
-          linkedinURL: 'https://www.linkedin.com/in/abhishek-doshi-520983199/',
-          tagLine: 'Flutter Developer',
-          taglineColor: Colors.teal.shade100,
-          twitterHandle: 'AbhishekDoshi26',
-          instagram: '_abhishek_doshi',*/
-
+        appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.white,
             ),
+          ),
+          title: Text('Contact Us'),
+        ),
+        body: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CircleAvatar(
+                child: FlutterLogo(),
+                radius: 50.0,
+                backgroundColor: Colors.transparent,
+                //backgroundImage: AssetImage('images/gtr.png'),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              SizedBox(
+                height: 15.0,
+                width: 200.0,
+                child: Divider(
+                  color: Colors.pink,
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Card(
+                margin: EdgeInsets.all(10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.account_box_outlined,
+                    color: Colors.pink,
+                  ),
+                  title: Text('R.Gokulakrishnan'),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.all(10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.add_location,
+                    color: Colors.pink,
+                  ),
+                  title: Text(
+                      '3/7, Amarjothi vimana nagar, Sulur, Coimbatore - 641401'),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.all(10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.pink,
+                  ),
+                  title: Text('+91 99528 41347'),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.all(10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.pink,
+                  ),
+                  title: Text('srds2020@gmail.com'),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
