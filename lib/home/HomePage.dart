@@ -3,7 +3,9 @@ import 'package:srds/mocktest/MockTest.dart';
 import 'package:srds/screens/AboutUs.dart';
 import 'package:srds/screens/ContactUs.dart';
 import 'package:srds/screens/PhotoGallery.dart';
+import 'package:srds/screens/Rules.dart';
 import 'package:srds/signs/Signs.dart';
+
 import '../auth/Authentication.dart';
 
 class HomePage extends StatefulWidget {
@@ -48,6 +50,13 @@ class _HomePageState extends State<HomePage> {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => MockTest()),
+    );
+  }
+
+  void _moveToTrafficRulesPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Rules()),
     );
   }
 
@@ -110,26 +119,46 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             RaisedButton(
-              child: Text("Signs"),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0),
+                  side: BorderSide(color: Colors.black)),
+              child: Text("Sign Boards",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                  )),
               onPressed: _moveToSignsPage,
               color: Colors.red,
-              textColor: Colors.yellow,
+              textColor: Colors.white,
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
               splashColor: Colors.grey,
             ),
+            SizedBox(height: 10),
             RaisedButton(
-              child: Text("Mock Test"),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0),
+                  side: BorderSide(color: Colors.yellow)),
+              child: Text("Mock Test",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                  )),
               onPressed: _moveToMockTestPage,
               color: Colors.green,
-              textColor: Colors.yellow,
+              textColor: Colors.white,
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
               splashColor: Colors.grey,
             ),
+            SizedBox(height: 10),
             RaisedButton(
-              child: Text("Rules"),
-              onPressed: _moveToSignsPage,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0),
+                  side: BorderSide(color: Colors.red)),
+              child: Text("Traffic Rules",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                  )),
+              onPressed: _moveToTrafficRulesPage,
               color: Colors.orange,
-              textColor: Colors.yellow,
+              textColor: Colors.white,
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
               splashColor: Colors.grey,
             )

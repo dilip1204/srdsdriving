@@ -25,10 +25,13 @@ class ContactUs extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              CircleAvatar(
-                child: FlutterLogo(),
-                radius: 50.0,
-                backgroundColor: Colors.transparent,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(20.0),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Image.asset('assets/images/welcome.png')
+                    ]),
                 //backgroundImage: AssetImage('images/gtr.png'),
               ),
               SizedBox(

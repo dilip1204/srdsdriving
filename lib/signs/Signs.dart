@@ -45,7 +45,9 @@ class _SignsState extends State<Signs> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               RaisedButton(
-                  shape: RoundedRectangleBorder(),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: Colors.black)),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
                   onPressed: () =>
@@ -71,7 +73,9 @@ class _SignsState extends State<Signs> {
                   color: Colors.white10),
 
               RaisedButton(
-                  shape: RoundedRectangleBorder(),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: Colors.black)),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
                   onPressed: () =>
@@ -96,7 +100,9 @@ class _SignsState extends State<Signs> {
                   textColor: Color(0xFF292929),
                   color: Colors.white10),
               RaisedButton(
-                  shape: RoundedRectangleBorder(),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: Colors.black)),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
                   onPressed: () =>
@@ -121,7 +127,9 @@ class _SignsState extends State<Signs> {
                   textColor: Color(0xFF292929),
                   color: Colors.white10),
               RaisedButton(
-                  shape: RoundedRectangleBorder(),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: Colors.black)),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
                   onPressed: () =>
@@ -146,7 +154,9 @@ class _SignsState extends State<Signs> {
                   textColor: Color(0xFF292929),
                   color: Colors.white10),
               RaisedButton(
-                  shape: RoundedRectangleBorder(),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: Colors.black)),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
                   onPressed: () =>
