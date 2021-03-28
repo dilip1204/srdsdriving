@@ -32,7 +32,6 @@ class ContactUs extends StatelessWidget {
                     children: <Widget>[
                       Image.asset('assets/images/welcome.png')
                     ]),
-                //backgroundImage: AssetImage('images/gtr.png'),
               ),
               SizedBox(
                 height: 10.0,
@@ -54,7 +53,14 @@ class ContactUs extends StatelessWidget {
                     Icons.account_box_outlined,
                     color: Colors.pink,
                   ),
-                  title: Text('R.Gokulakrishnan'),
+                  title: Text(
+                    'R.Gokulakrishnan',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
                 ),
               ),
               Card(
@@ -65,7 +71,13 @@ class ContactUs extends StatelessWidget {
                     color: Colors.pink,
                   ),
                   title: Text(
-                      '3/7, Amarjothi vimana nagar, Sulur, Coimbatore - 641401'),
+                    '3/7, Amarjothi vimana nagar, Sulur, Coimbatore - 641401',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
                 ),
               ),
               Card(
@@ -75,7 +87,22 @@ class ContactUs extends StatelessWidget {
                     Icons.phone,
                     color: Colors.pink,
                   ),
-                  title: Text('+91 99528 41347'),
+                  title: Text(
+                    '+91 99528 41347',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                  subtitle: Text(
+                    '+91 99659 30008',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
                 ),
               ),
               Card(
@@ -85,7 +112,14 @@ class ContactUs extends StatelessWidget {
                     Icons.email,
                     color: Colors.pink,
                   ),
-                  title: Text('srds2020@gmail.com'),
+                  title: Text(
+                    'srds2020@gmail.com',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
                 ),
               ),
             ],

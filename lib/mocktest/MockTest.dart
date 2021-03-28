@@ -1,9 +1,10 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:srds/auth/Authentication.dart';
-
 import 'package:srds/home/HomePage.dart';
-import 'package:srds/mocktest/MockTestScreen1.dart';
+import 'package:srds/mocktest/MockTestPrimaryScreen.dart';
+import 'package:srds/mocktest/MockTestSecondaryScreen.Dart';
 
 class MockTest extends StatefulWidget {
   MockTest({
@@ -72,10 +73,17 @@ class _MockTestState extends State<MockTest> {
     );
   }
 
-  void _moveToTestPage1() {
+  void _moveToPrimaryTestPage() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => MockTestScreen1()),
+      MaterialPageRoute(builder: (context) => MockTestPrimaryScreen()),
+    );
+  }
+
+  void _moveToSecondaryTestPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => MockTestSecondaryScreen()),
     );
   }
 
@@ -95,7 +103,7 @@ class _MockTestState extends State<MockTest> {
                   shape: RoundedRectangleBorder(),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
-                  onPressed: _moveToTestPage1,
+                  onPressed: _moveToPrimaryTestPage,
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: <Widget>[
@@ -118,7 +126,7 @@ class _MockTestState extends State<MockTest> {
                   shape: RoundedRectangleBorder(),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
-                  onPressed: _moveToTestPage1,
+                  onPressed: _moveToSecondaryTestPage,
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: <Widget>[

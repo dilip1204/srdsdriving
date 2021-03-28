@@ -26,9 +26,10 @@ class HomePage extends StatefulWidget {
 enum FormType { home, signs }
 
 class _HomePageState extends State<HomePage> {
-  static const String _AccountName = 'Dilipkumar';
-  static const String _AccountEmail = 'dilip.kumar1204@gmail.com';
-  static const String _AccountAbbr = 'DK';
+  static const String _AccountName = 'Welcome';
+  static const String _AccountEmail =
+      'Sri Ragavendra Driving Heavy Driving School';
+  static const String _AccountAbbr = 'SRDS';
 
   void _logOutUser() async {
     try {
@@ -73,8 +74,8 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.zero,
           children: <Widget>[
             new UserAccountsDrawerHeader(
-              accountName: const Text(_AccountName),
-              accountEmail: const Text(_AccountEmail),
+              accountName: new Text(_AccountName),
+              accountEmail: new Text(_AccountEmail),
               currentAccountPicture: new CircleAvatar(
                   backgroundColor: Colors.brown, child: new Text(_AccountAbbr)),
             ),
@@ -176,6 +177,7 @@ class _HomePageState extends State<HomePage> {
               IconButton(
                 icon: Icon(Icons.exit_to_app),
                 iconSize: 50.0,
+                tooltip: 'Click here to Logout',
                 color: Colors.white,
                 onPressed: _logOutUser,
               ),

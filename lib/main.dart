@@ -13,7 +13,7 @@ class SrdsMain extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       title: 'srds',
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.grey,
       ),

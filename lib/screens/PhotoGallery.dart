@@ -4,9 +4,13 @@ import 'package:photo_view/photo_view_gallery.dart';
 
 class PhotoGallery extends StatelessWidget {
   final imageList = [
-    'assets/images/warning.png',
-    'assets/images/warning.png',
-    'assets/images/warning.png',
+    'assets/images/image1.png',
+    'assets/images/image2.png',
+    'assets/images/image3.png',
+    'assets/images/image4.png',
+    'assets/images/image5.png',
+    'assets/images/image6.png',
+    'assets/images/image7.png',
   ];
 
   @override
