@@ -12,8 +12,8 @@ var wrongAnswerCount = 0;
 bool isAnswerCorrect = false;
 var quiz = new TestQuiz();
 
-class MockTestSecondaryScreen extends StatefulWidget {
-  MockTestSecondaryScreen({
+class MockTestThridScreen extends StatefulWidget {
+  MockTestThridScreen({
     this.auth,
     this.onSignedIn,
   });
@@ -23,89 +23,85 @@ class MockTestSecondaryScreen extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    return _MockTestSecondaryScreenState();
+    return _MockTestThridScreenState();
   }
 }
 
 class TestQuiz {
   var images = [
     "None",
-    "PedestriansCrossing",
-    "ParkingRightAllowed",
+    "Hospital",
+    "None",
+    "FirstAidPost",
+    "RestingPlace",
     "None",
     "None",
-    "RightTurnProhibited",
-    "None",
-    "HornProhiBited",
-    "None",
-    "NarrowBridgeAhead"
+    "EndOfSpeedRestriction",
+    "NarrowRoadAhead",
+    "None"
   ];
 
   var questions = [
-    "When a vehicle approaches an unguarded railway level crossing, before crossing it, the driver shall?",
-    "The Following sign represents?",
-    "The Following sign represents?",
-    "How can you distinguish a transport vehicle.?",
-    "Validity of learners licence",
+    "Vehicles proceeding from opposite direction should be allowed to pass through?",
+    "The Following sign represents..",
+    "Driver of a vehicle may overtake ?",
+    "The Following sign represents..",
+    "The Following sign represents..",
+    "Driver of a motor vehicle shall drive through",
+    "When a Vehicle is parked on the road side during night",
     "The following sign represents..",
-    "In a road without footpath, the pedestrians",
     "The following sign represents..",
-    "Free passage should be given to the following types of vehicles",
-    "The following sign represents..",
+    "Fog lamps are used for?",
   ];
 
   var choices = [
     [
-      "Stop the vehicle on the left side of the road, get down from the vehicle, go to the railway track,and ensure that no train or trolley is coming from either side",
-      "Sound horn and cross the track as fast as possible",
-      "Wait till the train passes",
+      "Your right side",
+      "Your left side",
+      "The convenient side",
     ],
-    ["Pedestrians Crossing", "Pedestrians may enter", "Pedestrians prohibited"],
+    ["First aid post", "Hospital", "Resting place"],
     [
-      "Keep right side",
-      "Parking on the right allowed",
-      "Compulsory turn to right"
+      "while driving down hil",
+      "If the road is sufficiently wide",
+      "When the driver of the vehicle in front shows the signal to overtake"
     ],
+    ["Resting place", "First Aid Post", "Hospital"],
+    ["Resting Place", "Hospital", "First aid post"],
     [
-      "By looking at the tyre size",
-      "By colour of the vehicle",
-      "By looking at the number plate of the vehicle"
-    ],
-    ["Till the driving licence is obtained", "6 months", "30 days"],
-    [
-      "U- Turn prohibited",
-      "Right turn prohibited",
-      "Overtaking through left prohibited"
+      "The right side of the road",
+      "The left side of the road",
+      "The Center of the road"
     ],
     [
-      "Should walk on the left side of the road",
-      "Should walk on the right side of the road",
-      "May walk on either side of the road"
+      "The vehicle should be locked",
+      "The person having licence to drive such a vehicle should be in the drivers seat",
+      "The park light shall remain lit"
     ],
-    ["Horn prohibited", "Compulsory sound horn", "May sound horn"],
+    ["Road closed", "No parking", "End of speed restriction"],
+    ["Narrow road ahead", "Narrow bridge ahead", "Roads on both sides ahead"],
     [
-      "Police vehicles",
-      "Ambulance and fire service vehicles",
-      "Express, Super Express buses"
-    ],
-    ["Roads on both sides in front", "Narrow road ahead", "Narrow bridge ahead"]
+      "During night",
+      "When there is mist",
+      "When the opposite vehicle is not using dim light"
+    ]
   ];
 
   var correctAnswers = [
-    "Stop the vehicle on the left side of the road, get down from the vehicle, go to the railway track,and ensure that no train or trolley is coming from either side",
-    "Pedestrians Crossing",
-    "Parking on the right allowed",
-    "By looking at the number plate of the vehicle",
-    "6 months",
-    "Right turn prohibited",
-    "Should walk on the right side of the road",
-    "Horn prohibited",
-    "Ambulance and fire service vehicles",
-    "Narrow bridge ahead"
+    "Your right side",
+    "Hospital",
+    "When the driver of the vehicle in front shows the signal to overtake",
+    "First Aid Post",
+    "Resting Place",
+    "The left side of the road",
+    "The park light shall remain lit",
+    "End of speed restriction",
+    "Narrow road ahead",
+    "When there is mist"
   ];
 }
 
-class _MockTestSecondaryScreenState extends State<MockTestSecondaryScreen> {
+class _MockTestThridScreenState extends State<MockTestThridScreen> {
   String _setImage() {
     if (quiz.images[questionNumber].contains("None")) {
       return "";
@@ -158,7 +154,7 @@ class _MockTestSecondaryScreenState extends State<MockTestSecondaryScreen> {
           alignment: Alignment.topCenter,
           child: new Column(
             children: <Widget>[
-              new Padding(padding: EdgeInsets.all(13.0)),
+              new Padding(padding: EdgeInsets.all(11.0)),
 
               new Container(
                 alignment: Alignment.centerRight,
@@ -188,10 +184,10 @@ class _MockTestSecondaryScreenState extends State<MockTestSecondaryScreen> {
               new Padding(padding: EdgeInsets.all(9.0)),
 
               new Image.asset(_setImage(),
-                  height: 120, width: 150, fit: BoxFit.fitHeight),
+                  height: 120, width: 150, fit: BoxFit.fitWidth),
 
               new Container(
-                height: 90,
+                height: 84,
                 child: new Row(
                   children: <Widget>[
                     SizedBox(
@@ -199,7 +195,7 @@ class _MockTestSecondaryScreenState extends State<MockTestSecondaryScreen> {
                       child: new Text(
                         quiz.questions[questionNumber],
                         style: new TextStyle(
-                            fontSize: 21.0, fontWeight: FontWeight.bold),
+                            fontSize: 21, fontWeight: FontWeight.bold),
                         maxLines: 3,
                         softWrap: true,
                       ),
