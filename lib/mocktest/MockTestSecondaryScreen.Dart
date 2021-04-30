@@ -195,7 +195,7 @@ class _MockTestSecondaryScreenState extends State<MockTestSecondaryScreen> {
                 child: new Row(
                   children: <Widget>[
                     SizedBox(
-                      width: 385,
+                      width: 350,
                       child: new Text(
                         quiz.questions[questionNumber],
                         style: new TextStyle(
