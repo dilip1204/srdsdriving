@@ -11,10 +11,10 @@ description: A new Flutter application.
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 1.0.2
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.2.2 <3.0.0"
 
 dependencies:
   flutter:
@@ -26,12 +26,13 @@ dependencies:
   firebase_core: ^0.4.0+9
   firebase_auth: ^0.14.0+5
   flutter_plugin_pdf_viewer: ^1.0.7
-
+  photo_view: ^0.4.0
+  circular_profile_avatar: ^1.0.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-    
+
 
 
 # For information on the generic Dart part of this file, see the
@@ -63,6 +64,70 @@ flutter:
     - assets/pdf/prohibitory_signs.pdf
     - assets/pdf/mandatory_signs.pdf
     - assets/pdf/information_signs.pdf
+    - assets/images/image1.png
+    - assets/images/image2.png
+    - assets/images/image3.png
+    - assets/images/image4.png
+    - assets/images/image5.png
+    - assets/images/image6.png
+    - assets/images/image7.png
+    - assets/images/Stop.png
+    - assets/images/AheadOnly.png
+    - assets/images/AxleWeightLimit.png
+    - assets/images/BulletCartProhibited.png
+    - assets/images/CompulsoryAheadOrTurnLeft.png
+    - assets/images/CompulsoryGoAheadOrTurnRight.png
+    - assets/images/CompulsoryKeepLeft.png
+    - assets/images/CompulsoryLeft.png
+    - assets/images/CompulsoryRight.png
+    - assets/images/CrossRoad.png
+    - assets/images/CycleCrossing.png
+    - assets/images/DangerousDip.png
+    - assets/images/Drivevehiclewithin50.png
+    - assets/images/EndOfSpeedRestriction.png
+    - assets/images/FirstAidPost.png
+    - assets/images/Giveway.png
+    - assets/images/BulletCartProhibited.png
+    - assets/images/GuardedRailwayCrossing.png
+    - assets/images/HornProhiBited.png
+    - assets/images/Hospital.png
+    - assets/images/LeftHairPinBend.png
+    - assets/images/LeftHandCurve.png
+    - assets/images/LeftReverseBend.png
+    - assets/images/LeftTurnProhibited.png
+    - assets/images/LevelGuardUnguarded.png
+    - assets/images/LooseGravel.png
+    - assets/images/MajorRoadAhead.png
+    - assets/images/NarrowBridgeAhead.png
+    - assets/images/NarrowRoadAhead.png
+    - assets/images/NoEntry.png
+    - assets/images/NoEntryFor2MVehicle.png
+    - assets/images/NoEntryfor2MVehicleHeight.png
+    - assets/images/NoEntryforMotorvehicles.png
+    - assets/images/NoParking.png
+    - assets/images/NoStopping.png
+    - assets/images/NoUTurn.png
+    - assets/images/Oneway.png
+    - assets/images/One-Way.png
+    - assets/images/OvertakingProhibited.png
+    - assets/images/ParkingRightAllowed.png
+    - assets/images/PedestriansCrossing.png
+    - assets/images/PedestriansProhibited.png
+    - assets/images/RestingPlace.png
+    - assets/images/RightHairPinBeng.png
+    - assets/images/RightHandCurve.png
+    - assets/images/RightReverseBend.png
+    - assets/images/RightTurnProhibited.png
+    - assets/images/RoundAbout.png
+    - assets/images/SideRoadLeft.png
+    - assets/images/SideRoadRight.png
+    - assets/images/SlipperyRoad.png
+    - assets/images/SoundHornCompulsory.png
+    - assets/images/StopSign.png
+    - assets/images/TrucksProhibited.png
+    - assets/images/warning.png
+    - assets/images/YIntersection.png
+    - assets/images/YIntersectionLeft.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

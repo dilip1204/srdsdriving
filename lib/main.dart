@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:srds/common/Mapping.dart';
+
 import 'auth/Authentication.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class SrdsMain extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       title: 'srds',
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.grey,
       ),

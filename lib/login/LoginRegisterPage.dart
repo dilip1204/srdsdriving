@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:srds/auth/Authentication.dart';
 import 'package:srds/common/DialogBox.dart';
+
 import '../common/DialogBox.dart';
 
 class LoginRegisterPage extends StatefulWidget {
@@ -10,8 +11,10 @@ class LoginRegisterPage extends StatefulWidget {
     this.auth,
     this.onSignedIn,
   });
+
   final AuthImplementation auth;
   final VoidCallback onSignedIn;
+
   State<StatefulWidget> createState() {
     return _LoginRegisterState();
   }
