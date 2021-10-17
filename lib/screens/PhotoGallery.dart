@@ -39,8 +39,16 @@ class PhotoGallery extends StatelessWidget {
         backgroundDecoration: BoxDecoration(
           color: Theme.of(context).canvasColor,
         ),
-        loadingChild: Center(
-          child: CircularProgressIndicator(),
+        loadingBuilder: (context, event) => Center(
+          child: Container(
+            width: 20.0,
+            height: 20.0,
+            child: CircularProgressIndicator(
+              value: event == null
+                  ? 0
+                  : event.cumulativeBytesLoaded / event.expectedTotalBytes,
+            ),
+          ),
         ),
       ),
     );
