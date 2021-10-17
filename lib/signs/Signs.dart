@@ -1,35 +1,33 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import '../auth/Authentication.dart';
 import 'package:flutter_plugin_pdf_viewer/flutter_plugin_pdf_viewer.dart';
+
+import '../auth/Authentication.dart';
+import '../signs/SignsReport.dart';
 
 class Signs extends StatefulWidget {
   Signs({
     this.auth,
     this.onSignedIn,
   });
+
   final AuthImplementation auth;
   final VoidCallback onSignedIn;
+
   State<StatefulWidget> createState() {
     return _SignsState();
   }
 }
 
-enum FormType { signs }
-
 class _SignsState extends State<Signs> {
   bool _isLoading = true;
   PDFDocument doc;
+  String name;
 
-  void _loadFromAssets() async {
-    setState(() {
-      _isLoading = true;
-    });
-    doc = await PDFDocument.fromAsset('assets/pdf/warning_signs.pdf');
-    setState(() {
-      _isLoading = false;
-    });
+  void _navigateToRoute(String name) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => SignsReport(name)));
   }
 
   //Design
@@ -45,20 +43,15 @@ class _SignsState extends State<Signs> {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Flexible(
-                flex: 8,
-                child: _isLoading
-                    ? CircularProgressIndicator()
-                    : PDFViewer(
-                        document: doc,
-                      ),
-              ),
+            children: <Widget>[
               RaisedButton(
-                  shape: RoundedRectangleBorder(),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: Colors.black)),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
-                  onPressed: _loadFromAssets,
+                  onPressed: () =>
+                      _navigateToRoute('assets/pdf/warning_signs.pdf'),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
@@ -78,11 +71,15 @@ class _SignsState extends State<Signs> {
                   ),
                   textColor: Color(0xFF292929),
                   color: Colors.white10),
+
               RaisedButton(
-                  shape: RoundedRectangleBorder(),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: Colors.black)),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
-                  onPressed: _loadFromAssets,
+                  onPressed: () =>
+                      _navigateToRoute('assets/pdf/priority_signs.pdf'),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
@@ -103,10 +100,13 @@ class _SignsState extends State<Signs> {
                   textColor: Color(0xFF292929),
                   color: Colors.white10),
               RaisedButton(
-                  shape: RoundedRectangleBorder(),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: Colors.black)),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
-                  onPressed: _loadFromAssets,
+                  onPressed: () =>
+                      _navigateToRoute('assets/pdf/prohibitory_signs.pdf'),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
@@ -127,10 +127,13 @@ class _SignsState extends State<Signs> {
                   textColor: Color(0xFF292929),
                   color: Colors.white10),
               RaisedButton(
-                  shape: RoundedRectangleBorder(),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: Colors.black)),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
-                  onPressed: _loadFromAssets,
+                  onPressed: () =>
+                      _navigateToRoute('assets/pdf/mandatory_signs.pdf'),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
@@ -151,10 +154,13 @@ class _SignsState extends State<Signs> {
                   textColor: Color(0xFF292929),
                   color: Colors.white10),
               RaisedButton(
-                  shape: RoundedRectangleBorder(),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.0),
+                      side: BorderSide(color: Colors.black)),
                   padding: EdgeInsets.only(
                       top: 7.0, bottom: 7.0, right: 40.0, left: 7.0),
-                  onPressed: _loadFromAssets,
+                  onPressed: () =>
+                      _navigateToRoute('assets/pdf/information_signs.pdf'),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
@@ -174,6 +180,7 @@ class _SignsState extends State<Signs> {
                   ),
                   textColor: Color(0xFF292929),
                   color: Colors.white10),
+              // ),
             ],
           ),
         ),

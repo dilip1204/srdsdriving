@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:srds/auth/Authentication.dart';
 import 'package:srds/common/DialogBox.dart';
+
 import '../common/DialogBox.dart';
 
 class LoginRegisterPage extends StatefulWidget {
@@ -10,8 +11,10 @@ class LoginRegisterPage extends StatefulWidget {
     this.auth,
     this.onSignedIn,
   });
+
   final AuthImplementation auth;
   final VoidCallback onSignedIn;
+
   State<StatefulWidget> createState() {
     return _LoginRegisterState();
   }
@@ -42,12 +45,12 @@ class _LoginRegisterState extends State<LoginRegisterPage> {
     if (validateAndSave()) {
       try {
         if (_formType == FormType.login) {
-          String userId = await widget.auth.SignIn(_email, _password);
+          String userId = await widget.auth.signIn(_email, _password);
           dialogBox.information(
               context, 'Congratulations!', 'you logged in successfully');
           print('login user id =' + userId);
         } else {
-          String userId = await widget.auth.SignUp(_email, _password);
+          String userId = await widget.auth.signUp(_email, _password);
           dialogBox.information(context, 'Congratulations!',
               'your account has been created successfully');
           print('Register user id =' + userId);
